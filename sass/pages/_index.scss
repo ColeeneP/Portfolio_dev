@@ -76,9 +76,15 @@
 
     .soft {
         width: 500px;
-        padding-left: 50px;
+        padding: 0 25px;
         margin: 10px 0px 0px 100px;
-        border: 1px solid $second_color;
+        border: 1px solid $first_color;
+        border-radius: 5px;
+
+        h4 {
+            text-align: center;
+            color: $second_color;
+        }
     }
 }
 

@@ -173,6 +173,7 @@ header {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
+  align-items: center;
 }
 header a {
   text-decoration: none;
@@ -183,17 +184,16 @@ header a:hover {
   color: rgb(201, 255, 210);
 }
 header h1 {
-  margin: 0;
+  margin-left: 10%;
   display: block;
-  padding: 1%;
   height: 20%;
+  width: 20%;
 }
 header nav {
   display: flex;
   justify-content: space-around;
   flex-flow: row nowrap;
   padding: 1%;
-  height: 20%;
 }
 header nav .nav_item {
   color: rgb(0, 183, 255);
@@ -265,9 +265,14 @@ header nav .nav_item {
 }
 #competences .soft {
   width: 500px;
-  padding-left: 50px;
+  padding: 0 25px;
   margin: 10px 0px 0px 100px;
-  border: 1px solid #64a151;
+  border: 1px solid #111827;
+  border-radius: 5px;
+}
+#competences .soft h4 {
+  text-align: center;
+  color: #64a151;
 }
 
 #experiences {
