@@ -220,18 +220,15 @@ header nav .nav_item {
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 0px 20px 0px;
+  margin-top: 10%;
 }
-#index h1 {
-  display: block;
+#index h2 {
   text-align: center;
   align-self: center;
   width: 40%;
 }
 #index .presentation {
   align-self: center;
-}
-#index ul {
-  list-style: none;
 }
 
 .section_organisation {
