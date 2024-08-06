@@ -19,6 +19,7 @@ body {
 
 main {
   position: relative;
+  margin-bottom: 25px;
 }
 
 .fa-html5 {
@@ -146,7 +147,7 @@ main {
 }
 
 .timeline article li:not(:last-child) {
-  border-bottom: 1px #aaa solid;
+  border-bottom: 1px #288b39 solid;
 }
 
 .timeline article li span {
@@ -159,8 +160,8 @@ footer {
   background-color: #64a151;
   text-align: center;
   width: 100%;
-  margin-top: auto;
-  position: sticky;
+  position: fixed;
+  bottom: 0;
 }
 
 header {
@@ -345,13 +346,11 @@ header nav .nav_item {
 }
 #contact .email {
   display: flex;
-  border: 2px solid #64a151;
   border-radius: 10px;
   background-color: white;
   width: 300px;
   height: 150px;
   align-self: center;
-  margin-top: 50px;
 }
 #contact .email a {
   display: block;
@@ -388,6 +387,6 @@ header nav .nav_item {
   justify-content: space-between;
 }
 #contact .reseaux .logo_reseau {
-  width: 30%;
+  width: 15%;
   padding: 10px 0px 10px 0px;
 }/*# sourceMappingURL=main.css.map */

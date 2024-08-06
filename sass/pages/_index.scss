@@ -173,13 +173,12 @@
 
     .email {
         display: flex;
-        border: 2px solid $second_color;
+        // border: 2px solid $second_color;
         border-radius: 10px;
         background-color: $background;
         width: 300px;
         height: 150px;
         align-self: center;
-        margin-top: 50px;
 
             a {
                 display: block;
@@ -222,7 +221,7 @@
         justify-content: space-between;
 
         .logo_reseau {
-            width: 30%;
+            width: 15%;
             padding: 10px 0px 10px 0px;
         }
     }
