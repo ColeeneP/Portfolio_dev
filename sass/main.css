@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@keyframes apparition {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 5px;
+  }
+}
+body {
+  margin: auto;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+}
+
+main {
+  position: relative;
+}
+
+.fa-html5 {
+  color: #E44D26;
+}
+
+.fa-css3-alt {
+  color: #0070BB;
+}
+
+.fa-sass {
+  color: #CF649A;
+}
+
+.fa-js-square {
+  color: #F7E018;
+}
+
+.fa-database {
+  color: #3299DB;
+}
+
+.fa-angular {
+  color: #DE002D;
+}
+
+.fa-java {
+  color: red;
+}
+
+.fa-react {
+  color: #5CCFEE;
+}
+
+.fa-laptop-code {
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+.timeline:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 50%;
+  width: 8px;
+  background: #64a151;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.timeline article {
+  position: relative;
+  background: #64a151;
+  width: calc(50% - 40px);
+  padding: 15px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.timeline article + article {
+  margin-top: 20px;
+}
+
+.timeline article:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 26px);
+  background: white;
+  width: 24px;
+  height: 24px;
+  border: 6px #64a151 solid;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline article:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 16px solid #64a151;
+  border-bottom: 20px solid transparent;
+}
+
+.timeline article:nth-child(even) {
+  margin-left: calc(50% + 48px);
+  border-radius: 0px 5px 5px 0px;
+}
+
+.timeline article:nth-child(even):before {
+  left: auto;
+  right: calc(100% + 26px);
+}
+
+.timeline article:nth-child(even):after {
+  left: auto;
+  right: 100%;
+  border-left: none;
+  border-right: 16px solid #64a151;
+}
+
+.timeline article ul {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline article li {
+  list-style: none;
+  padding: 8px 0;
+}
+
+.timeline article li:not(:last-child) {
+  border-bottom: 1px #aaa solid;
+}
+
+.timeline article li span {
+  display: inline-block;
+  width: 70px;
+  color: #64a151;
+}
+
+footer {
+  background-color: #64a151;
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  font-family: "Kaisei HarunoUmi", serif;
+  background-color: #64a151;
+  background-size: cover;
+  height: 100px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+header a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+header a:hover {
+  color: red;
+}
+header h1 {
+  margin: 0;
+  display: block;
+  padding: 1%;
+  height: 20%;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+  padding: 1%;
+  height: 20%;
+}
+header nav .nav_item {
+  color: rgb(0, 183, 255);
+  padding: 20px;
+}
+
+.section_organisation {
+  display: flex;
+  flex-flow: column wrap;
+  background: white;
+}
+.section_organisation ul {
+  margin: 0;
+  list-style: none;
+}
+.section_organisation a {
+  text-decoration: none;
+  color: #64a151;
+}
+.section_organisation h1, .section_organisation h2, .section_organisation h3 {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.skills_div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 0px 20px 0px 20px;
+  margin: 20px 0px 20px 0px;
+}
+
+.soft_left {
+  width: 500px;
+  padding-left: 50px;
+  margin: 10px 0px 0px 100px;
+  border: 1px solid #64a151;
+}
+
+.soft_right {
+  width: 500px;
+  padding-left: 50px;
+  margin: 50px auto;
+  border: 1px solid #64a151;
+}
+
+/**
+ * Carousel.sass
+ * @author: Dang Van Thanh
+ * @github: https://github.com/dangvanthanh/carousel.sass
+ * @description: A Simple Carousel Pure CSS Using Sass
+ * @version: 1.0.0
+ */
+.carousel > input[type=radio]:nth-child(5):checked ~ .carousel__next > label:nth-child(1), .carousel > input[type=radio]:nth-child(5):checked ~ .carousel__prev > label:nth-child(4), .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__next > label:nth-child(5), .carousel > input[type=radio]:nth-child(4):checked ~ .carousel__prev > label:nth-child(3), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__next > label:nth-child(4), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__prev > label:nth-child(5) {
+  opacity: 1 !important;
+  z-index: 3;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background: #fcfcfc;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+}
+
+.carousel__item1 {
+  background-image: url("../../images/image1.jpg");
+}
+
+.contact {
+  color: white;
+  position: absolute;
+  bottom: 25%;
+  left: 45%;
+  z-index: 3;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.reseaux {
+  position: absolute;
+  bottom: 3%;
+  opacity: 1;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  font-size: 8px;
+  width: 100%;
+  left: 47%;
+}
+.reseaux .logo_reseau {
+  align-items: center;
+  padding-right: 10px;
+  color: white;
+}
+.reseaux .logo_reseau a:visited {
+  color: white;
+}
+
+.circle {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+input {
+  position: absolute;
+  display: none;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.menu {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+  color: #03A9F4;
+}
+
+.btn {
+  background: #ECEFF1;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn:not(:first-child) {
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+}
+
+.btn:nth-child(2) {
+  top: 0px;
+  transition-delay: 0s;
+}
+
+.btn:nth-child(3) {
+  top: 0px;
+  left: 0px;
+  transition-delay: 0.1s;
+}
+
+.btn:nth-child(4) {
+  left: 0px;
+  transition-delay: 0.2s;
+}
+
+.btn:nth-child(5) {
+  top: 0px;
+  left: 0px;
+  transition-delay: 0.3s;
+}
+
+.btn:nth-child(6) {
+  top: 0px;
+  transition-delay: 0.4s;
+}
+
+.btn:nth-child(7) {
+  top: 0px;
+  left: 0px;
+  transition-delay: 0.5s;
+}
+
+.btn:nth-child(8) {
+  left: 0px;
+  transition-delay: 0.6s;
+}
+
+.btn:nth-child(9) {
+  top: 0px;
+  left: 0px;
+  transition-delay: 0.7s;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(2) {
+  top: -150px;
+  opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(3) {
+  top: -100px;
+  left: 100px;
+  opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(4) {
+  left: 150px;
+  opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(5) {
+  top: 100px;
+  left: 100px;
+  opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(6) {
+  top: 150px;
+  opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(7) {
+  top: 100px;
+  left: -100px;
+  opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(8) {
+  left: -150px;
+  opacity: 1;
+}
+
+input#toggle:checked ~ #show-menu .btn:nth-child(9) {
+  top: -100px;
+  left: -100px;
+  opacity: 1;
+}
+
+.menuBtn, .closeBtn {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.closeBtn {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+input#toggle:checked ~ #show-menu .btn .menuBtn {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+input#toggle:checked ~ #show-menu .btn .closeBtn {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.cadre {
+  width: 80%;
+  z-index: 1000;
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cadre .experience {
+  margin: 20px;
+  width: 20%;
+  color: white;
+  border: 1px solid white;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.25s;
+}
+.cadre .experience .details {
+  display: none;
+}
+.cadre .experience:hover {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  background-color: #2E3000;
+}
+.cadre .experience:hover .details {
+  display: block;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.carousel > input[type=radio] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 0;
+}
+.carousel > input[type=radio]:checked ~ .carousel__items .carousel__item,
+.carousel > input[type=radio]:checked ~ .carousel__prev > label,
+.carousel > input[type=radio]:checked ~ .carousel__next > label {
+  opacity: 0;
+}
+.carousel > input[type=radio]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
+  opacity: 1;
+  z-index: 0;
+}
+.carousel > input[type=radio]:nth-child(1):checked ~ .carousel__nav label:nth-child(1) {
+  cursor: default;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.carousel > input[type=radio]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
+  opacity: 1;
+  z-index: 0;
+}
+.carousel > input[type=radio]:nth-child(2):checked ~ .carousel__nav label:nth-child(2) {
+  cursor: default;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.carousel > input[type=radio]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
+  opacity: 1;
+  z-index: 0;
+}
+.carousel > input[type=radio]:nth-child(3):checked ~ .carousel__nav label:nth-child(3) {
+  cursor: default;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.carousel > input[type=radio]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
+  opacity: 1;
+  z-index: 0;
+}
+.carousel > input[type=radio]:nth-child(4):checked ~ .carousel__nav label:nth-child(4) {
+  cursor: default;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.carousel > input[type=radio]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
+  opacity: 1;
+  z-index: 0;
+}
+.carousel > input[type=radio]:nth-child(5):checked ~ .carousel__nav label:nth-child(5) {
+  cursor: default;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+}
+.carousel__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: -2;
+}
+.carousel__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel__item img {
+  width: 100vw;
+  vertical-align: middle;
+  z-index: -2;
+}
+.carousel__prev > label, .carousel__next > label {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+.carousel__prev > label:hover, .carousel__prev > label:focus, .carousel__next > label:hover, .carousel__next > label:focus {
+  opacity: 0.5 !important;
+}
+.carousel__prev > label:before, .carousel__prev > label:after, .carousel__next > label:before, .carousel__next > label:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.carousel__prev > label:before, .carousel__next > label:before {
+  background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%), linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
+  width: 60%;
+  height: 60%;
+  top: 20%;
+}
+.carousel__prev > label {
+  left: 2%;
+}
+.carousel__prev > label:before {
+  left: 35%;
+  top: 20%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.carousel__next > label {
+  right: 2%;
+}
+.carousel__next > label:before {
+  left: 10%;
+  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+}
+.carousel__nav {
+  padding: 0px 20px 0px 20px;
+  position: absolute;
+  top: 3%;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  z-index: 3;
+  color: white;
+  justify-content: space-between;
+}
+.carousel__nav > label {
+  padding-bottom: 10px;
+  cursor: pointer;
+  margin: 20px;
+  height: 20px;
+}
+.carousel__nav span {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

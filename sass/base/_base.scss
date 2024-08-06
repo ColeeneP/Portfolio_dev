@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+body {
+    margin: auto;
+    font-size: 20px;
+    color: $text_color;
+    background-color: $background;
+}
+
+main {
+    position: relative;
+=======
+html {
+    box-sizing: border-box;
+    background-color: $main-color;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+body {
+  margin: 0;
+
+  animation: background_spinning 1s linear;
+  animation-delay: 3s;
+}
+
+h2 {
+  margin: 0px 0px 40px 0px;
+}
+
+main {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+@media (max-width: 1300px) {
+  main {
+      margin: 20px;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+>>>>>>> f9605079cddaab4c6950ec3266c59dee0839f716
+}
