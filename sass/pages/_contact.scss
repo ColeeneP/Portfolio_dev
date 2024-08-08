@@ -1,0 +1,59 @@
+#contact {
+    opacity: 0.9;
+
+    .email {
+        display: flex;
+        // border: 2px solid $second_color;
+        border-radius: 10px;
+        background-color: $background;
+        width: 300px;
+        height: 150px;
+        align-self: center;
+
+            a {
+                display: block;
+                margin: auto;
+            }
+    }
+
+    .localisation {
+        margin: 50px auto 0px auto;
+        border: 2px solid $second_color;
+        display: flex;
+        flex-flow: row nowrap;
+
+            img {
+                width: 100%;
+                position: relative;
+            }
+
+            .card_localisation {
+                position: absolute;
+                vertical-align: center;
+                border: 2px solid $second_color;
+                border-radius: 10px;
+                background-color: $second_color;
+                opacity: 0.9;
+                width: 300px;
+                height: 150px;
+
+                p {
+                    display: block;
+                    margin: auto;
+                }
+            }
+    }
+
+    .reseaux {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: auto;
+        justify-content: space-between;
+
+        .logo_reseau {
+            width: 15%;
+            padding: 10px 0px 10px 0px;
+        }
+    }
+
+}

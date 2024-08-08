@@ -1,0 +1,25 @@
+#formation {
+
+    h3 {
+        text-align: left;
+    }
+
+    .bloc {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        margin: auto;
+
+        .left, .right {
+            padding: 2%;
+            width: 45%;
+            border: 1px solid white;
+            animation: 1.5s linear 0.2s apparition;
+            overflow: hidden;
+        }
+    }
+
+    ul {
+        margin: auto;
+    }
+}

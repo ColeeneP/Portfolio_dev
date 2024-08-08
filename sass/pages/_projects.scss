@@ -1,0 +1,42 @@
+#projects {
+    opacity: 0.9;
+
+    .projects_div {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    h2 {
+        align-self: center;
+    }
+
+    a {
+        display: contents;
+    }
+
+    figure {
+        width: 40%;
+        background-color: $second_color;
+        color: $text_color;
+        display: flex;
+        justify-content: space-between;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        img {
+            width: 25%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        figcaption {
+            margin: 0px 15px 15px 15px;
+
+                i {
+                    margin-left: 0.3em;
+                }
+        }
+    }
+}

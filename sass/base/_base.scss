@@ -9,3 +9,26 @@ main {
     position: relative;
     margin-bottom: 25px;
 }
+
+.section_organisation {
+    display: flex;
+    flex-flow: column wrap;
+    background: $background;
+
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $second_color;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+
+}
