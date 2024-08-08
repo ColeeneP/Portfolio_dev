@@ -99,7 +99,6 @@ main {
   border-radius: 3px;
   z-index: 1;
 }
-
 .timeline article {
   position: relative;
   background: #64a151;
@@ -107,11 +106,12 @@ main {
   padding: 15px;
   border-radius: 5px 0px 0px 5px;
 }
-
+.timeline article h4 {
+  margin: 0;
+}
 .timeline article + article {
   margin-top: 20px;
 }
-
 .timeline article:before {
   content: "";
   display: block;
@@ -125,7 +125,6 @@ main {
   border-radius: 50%;
   z-index: 2;
 }
-
 .timeline article:after {
   content: "";
   position: absolute;
@@ -137,44 +136,65 @@ main {
   border-left: 16px solid #64a151;
   border-bottom: 20px solid transparent;
 }
-
 .timeline article:nth-child(even) {
   margin-left: calc(50% + 48px);
   border-radius: 0px 5px 5px 0px;
 }
-
 .timeline article:nth-child(even):before {
   left: auto;
   right: calc(100% + 26px);
 }
-
 .timeline article:nth-child(even):after {
   left: auto;
   right: 100%;
   border-left: none;
   border-right: 16px solid #64a151;
 }
-
 .timeline article ul {
   margin: 0;
   padding: 0;
 }
-
 .timeline article li {
   list-style: none;
   padding: 8px 0;
 }
-
 .timeline article li:not(:last-child) {
   border-bottom: 1px #288b39 solid;
 }
-
 .timeline article li span {
   display: inline-block;
   width: 70px;
   color: #64a151;
 }
 
+@media (max-width: 650px) {
+  .timeline {
+    padding: 25px 25px;
+  }
+  .timeline:after {
+    display: none;
+  }
+  .timeline article {
+    position: relative;
+    background: #64a151;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  .timeline article:before {
+    display: none;
+  }
+  .timeline article:after {
+    display: none;
+  }
+  .timeline article:nth-child(even) {
+    margin-left: 0;
+    border-radius: 5px 5px 5px 5px;
+  }
+  .timeline article:nth-child(even):before {
+    right: 0;
+  }
+}
 footer {
   background-color: #64a151;
   text-align: center;
