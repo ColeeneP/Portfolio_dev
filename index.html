@@ -11,29 +11,67 @@
     <title>Accueil</title>
 </head>
 <body>
-    <header id="top">
-        <a href="./index.html"><h1>Coleene</h1></a>
+    <header id="top" class="desktop_header">
+        <h1><a href="./index.html">Coleene</a></h1>
         <nav>
-            <div class="nav_item"><a href="./index.html">Presentation</a></div>
-            <div class="nav_item"><a href="./skills.html">Skills</a></div>
-            <div class="nav_item"><a href="./experiences.html">Experience</a></div>
-            <div class="nav_item"><a href="./formation.html">Study</a></div>
-            <div class="nav_item"><a href="./projects.html">Projects</a></div>
-            <div class="nav_item"><a href="./interests.html">Interests</a></div>
-            <div class="nav_item"><a href="./contact.html">Contact</a></div>
+            <ul>
+                <li class="nav_item"><a href="./index.html">Presentation</a></li>
+                <li class="nav_item"><a href="./skills.html">Skills</a></li>
+                <li class="nav_item"><a href="./experiences.html">Experience</a></li>
+                <li class="nav_item"><a href="./formation.html">Study</a></li>
+                <li class="nav_item"><a href="./projects.html">Projects</a></li>
+                <li class="nav_item"><a href="./interests.html">Interests</a></li>
+                <li class="nav_item"><a href="./contact.html">Contact</a></li>
+            </ul>
       </nav>
     </header>
+
+    <header id="top" class="mobile_header">
+        <h1><a href="./index.html">Coleene</a></h1>
+        <nav>
+            <!-- click reciever -->
+            <input type="checkbox" /> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li class="nav_item"><a href="./index.html">Presentation</a></li>
+                <li class="nav_item"><a href="./skills.html">Skills</a></li>
+                <li class="nav_item"><a href="./experiences.html">Experience</a></li>
+                <li class="nav_item"><a href="./formation.html">Study</a></li>
+                <li class="nav_item"><a href="./projects.html">Projects</a></li>
+                <li class="nav_item"><a href="./interests.html">Interests</a></li>
+                <li class="nav_item"><a href="./contact.html">Contact</a></li>
+            </ul>
+      </nav>
+    </header>
+
     <main>
-    
       <section id="index">
-          <h2>IT Project Management Engineer</h2>
-          <div class="presentation">
-              <p> Hi, I'm Coleene !</p>
-              <p>I'm self-taught and love to learn new things everyday. In my work, I'm organized and rigorous.<br />
-              I'm a javascript developer and my favorite framework is React.<br /><br />
-              I create and manage responsive web site, APIs and databases.</p><br />
-              <p>I'm able to work as <strong>Consultant</strong>, <strong>Scrum Master</strong> and <strong>Fullstack Developer</strong>.</p>
-          </div>
+        <article class="presentation">
+            <h2>IT Project Management Engineer</h2>
+            <div class="presentation_text">
+                <p> Hi, I'm Coleene !</p>
+                <p>I'm self-taught and love to learn new things everyday. In my work, I'm organized and rigorous.<br />
+                My main langage is Javascript and my favorite framework is React.<br /><br />
+                I create and manage responsive web site, APIs and databases.</p>
+                <p>I'm able to work as :
+                    <ul>
+                        <li><strong>Consultant SAP / ERP / SI</strong></li>
+                        <li><strong>Scrum Master</strong></li>
+                        <li><strong>Fullstack Developer</strong></li>
+                    </ul>
+                    I don't work with .NET, C# and PHP yet.
+                    </p>
+            </div>
+        </article>
+          <article class="details">
+            To work with me, you have to know these following :<br />
+            <ul>
+                <li>I only want to work with good vibes. Sell me your project with your heart, make me believe in it and yours objectives.</li>
+                <li>If you are not sure about the final product I can help you into your reflections and to find your right way.</li>
+            </ul>
+          </article>
       </section>
 
       <a href="#top" class="arrow"><i class="fas fa-arrow-up fa-2x"></i></a>
@@ -43,6 +81,6 @@
         <span>Copyright © 2024 Coleene Poudevigne</span>
     </footer>
 
-    <!-- <script src="index.js" async></script> -->
+    <script src="index.js" async></script>
 </body>
 </html>

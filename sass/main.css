@@ -164,6 +164,10 @@ footer {
   bottom: 0;
 }
 
+.mobile_header {
+  display: none;
+}
+
 header {
   font-family: "Kaisei HarunoUmi", serif;
   background-color: #64a151;
@@ -184,22 +188,112 @@ header a:hover {
   color: rgb(201, 255, 210);
 }
 header h1 {
-  margin-left: 10%;
+  margin-left: 25px;
   display: block;
-  height: 20%;
   width: 20%;
 }
 header nav {
   display: flex;
   justify-content: space-around;
   flex-flow: row nowrap;
-  padding: 1%;
+  padding-right: 10px;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 header nav .nav_item {
   color: rgb(0, 183, 255);
   padding: 20px;
 }
 
+@media (max-width: 1200px) {
+  .mobile_header {
+    display: flex;
+  }
+  .desktop_header {
+    display: none;
+  }
+  header .side_nav {
+    width: 10%;
+  }
+  header nav {
+    display: block;
+    position: relative;
+    padding-right: 25px;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+         user-select: none;
+    /* Hamburger */
+  }
+  header nav ul {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    width: 300px;
+    margin-top: 10px;
+    background: #64a151;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    display: none;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  header nav ul li {
+    padding: 10px 0;
+  }
+  header nav input {
+    display: block;
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+    /* Transform all the slices of hamburger into a crossmark */
+    /* Hide the middle one */
+    /* Last one should go the other direction */
+    /* Make menu appears */
+  }
+  header nav input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  header nav input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  header nav input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  header nav input:checked ~ ul {
+    display: block;
+  }
+  header nav span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #111827;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+  header nav span:first-child {
+    transform-origin: 0% 0%;
+  }
+  header nav span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+}
 .arrow {
   display: block;
   position: fixed;
@@ -214,21 +308,30 @@ header nav .nav_item {
 
 #index {
   width: 100%;
+  margin-top: 10%;
+  display: flex;
+  flex-flow: column wrap;
+}
+#index .presentation {
+  align-self: center;
+  padding: 0px 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px 0px 20px 0px;
-  margin-top: 10%;
 }
-#index h2 {
+#index .presentation h2 {
   text-align: center;
   align-self: center;
   width: 40%;
+  padding: 0px 20px;
 }
-#index .presentation {
-  align-self: center;
+#index .presentation .presentation_text {
+  padding: 0px 25px;
+}
+#index .details {
+  padding: 25px 20px 0 20px;
 }
 
 .section_organisation {
@@ -391,4 +494,16 @@ header nav .nav_item {
 #contact .reseaux .logo_reseau {
   width: 15%;
   padding: 10px 0px 10px 0px;
+}
+
+@media (max-width: 500px) {
+  #index {
+    margin-top: 0;
+  }
+  #index .presentation {
+    flex-direction: column;
+  }
+  #index .presentation h2 {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
