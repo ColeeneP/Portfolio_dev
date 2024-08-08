@@ -308,12 +308,11 @@ header nav .nav_item {
 
 #index {
   width: 100%;
-  margin-top: 10%;
+  margin-top: 2%;
   display: flex;
   flex-flow: column wrap;
 }
 #index .presentation {
-  align-self: center;
   padding: 0px 25px;
   display: flex;
   flex-direction: row;
@@ -496,7 +495,7 @@ header nav .nav_item {
   padding: 10px 0px 10px 0px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   #index {
     margin-top: 0;
   }
