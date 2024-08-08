@@ -161,3 +161,13 @@ header {
         }
     }
 }
+
+@media (max-width: 750px) {
+    header {
+        height: 80px;
+        
+        h1 {
+            font-size: 32px;
+        }
+    }
+}

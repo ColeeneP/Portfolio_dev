@@ -333,6 +333,14 @@ header nav .nav_item {
     transform-origin: 0% 100%;
   }
 }
+@media (max-width: 750px) {
+  header {
+    height: 80px;
+  }
+  header h1 {
+    font-size: 32px;
+  }
+}
 #contact {
   opacity: 0.9;
 }
