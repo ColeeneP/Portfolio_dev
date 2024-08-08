@@ -4,6 +4,7 @@
     .projects_div {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
     }
 
     h2 {
@@ -35,8 +36,28 @@
             margin: 0px 15px 15px 15px;
 
                 i {
-                    margin-left: 0.3em;
+                    margin: 0.3em;
                 }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #projects {
+        figure {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #projects {
+        figure {
+            figcaption {
+                    i {
+                        margin: 0.3em;
+                    }
+            }
         }
     }
 }
