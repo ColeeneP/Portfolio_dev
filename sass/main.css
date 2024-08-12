@@ -425,8 +425,12 @@ header nav .nav_item {
 #formation .bloc .left img, #formation .bloc .right img {
   width: 100px;
 }
-#formation ul {
+
+ul {
   margin: auto;
+}
+ul li {
+  padding: 5px 0;
 }
 
 @media (max-width: 750px) {
