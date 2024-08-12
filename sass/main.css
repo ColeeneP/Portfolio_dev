@@ -509,7 +509,7 @@ header nav .nav_item {
 }
 
 @media (max-width: 750px) {
-  #interets ul {
+  #interets ul, #interets div {
     width: 90%;
   }
 }
