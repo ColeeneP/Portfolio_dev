@@ -9,3 +9,11 @@
       margin: 10px 0;
     }
 }
+
+@media (max-width: 750px) {
+  #interets {
+    ul {
+      width: 90%;
+    }
+  }
+}

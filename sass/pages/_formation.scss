@@ -17,6 +17,14 @@
             overflow: hidden;
             text-align: left;
 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                text-align: center;
+            }
+
             img {
                 width: 100px;
             }
@@ -25,5 +33,21 @@
 
     ul {
         margin: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    #formation {
+        h3 {
+            padding: 20px 0 20px 50px;
+        }
+        .bloc {
+            flex-flow: column;
+            align-items: center;
+
+            .left, .right {
+                width: 80%;
+            }
+        }
     }
 }
