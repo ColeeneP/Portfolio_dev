@@ -1,8 +1,10 @@
 footer {
     background-color: $second_color;
     text-align: center;
+    min-height: 25px;
     width: 100%;
-    // margin-top: auto;
+    max-width: 1920px;
+    align-self: center;
     position: fixed;
     bottom: 0;
 }

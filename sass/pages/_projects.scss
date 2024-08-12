@@ -17,23 +17,23 @@
 
     figure {
         width: 40%;
-        background-color: $second_color;
+        background-color: rgb(91, 189, 91);
+        opacity: 0.9;
         color: $text_color;
         display: flex;
         justify-content: space-between;
+        border-radius: 5px;
 
         &:hover {
-            opacity: 0.8;
-        }
-
-        img {
-            width: 25%;
-            height: 200px;
-            object-fit: contain;
+            opacity: 1;
         }
 
         figcaption {
             margin: 0px 15px 15px 15px;
+
+                img {
+                    width: 48px;
+                }
 
                 i {
                     margin: 0.3em;

@@ -15,6 +15,7 @@ body {
   font-size: 20px;
   color: black;
   background-color: white;
+  max-width: 1920px;
 }
 
 main {
@@ -198,7 +199,10 @@ main {
 footer {
   background-color: #64a151;
   text-align: center;
+  min-height: 25px;
   width: 100%;
+  max-width: 1920px;
+  align-self: center;
   position: fixed;
   bottom: 0;
 }
@@ -403,7 +407,6 @@ header nav .nav_item {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  margin: auto;
 }
 #formation .bloc .left, #formation .bloc .right {
   padding: 2%;
@@ -411,6 +414,10 @@ header nav .nav_item {
   border: 1px solid white;
   animation: 1.5s linear 0.2s apparition;
   overflow: hidden;
+  text-align: left;
+}
+#formation .bloc .left img, #formation .bloc .right img {
+  width: 100px;
 }
 #formation ul {
   margin: auto;
@@ -430,14 +437,30 @@ header nav .nav_item {
   justify-content: space-evenly;
   align-items: center;
 }
-#index .presentation h2 {
+#index .presentation .presentation_title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#index .presentation .presentation_title h2 {
   text-align: center;
   align-self: center;
-  width: 40%;
+  width: 100%;
   padding: 0px 20px;
+  color: green;
+}
+#index .presentation .presentation_title img {
+  width: 350px;
+  border-radius: 20px;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #index .presentation .presentation_text {
   padding: 0px 25px;
+  align-self: center;
 }
 #index .details {
   padding: 25px 20px 0 20px;
@@ -450,8 +473,11 @@ header nav .nav_item {
   #index .presentation {
     flex-direction: column;
   }
-  #index .presentation h2 {
+  #index .presentation .presentation_title h2 {
     width: 100%;
+  }
+  #index .presentation .presentation_title img {
+    width: 60%;
   }
 }
 #interets {
@@ -480,22 +506,21 @@ header nav .nav_item {
 }
 #projects figure {
   width: 40%;
-  background-color: #64a151;
+  background-color: rgb(91, 189, 91);
+  opacity: 0.9;
   color: black;
   display: flex;
   justify-content: space-between;
+  border-radius: 5px;
 }
 #projects figure:hover {
-  opacity: 0.8;
-}
-#projects figure img {
-  width: 25%;
-  height: 200px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  opacity: 1;
 }
 #projects figure figcaption {
   margin: 0px 15px 15px 15px;
+}
+#projects figure figcaption img {
+  width: 48px;
 }
 #projects figure figcaption i {
   margin: 0.3em;

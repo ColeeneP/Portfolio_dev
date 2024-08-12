@@ -8,7 +8,6 @@
         display: flex;
         flex-flow: row;
         justify-content: space-between;
-        margin: auto;
 
         .left, .right {
             padding: 2%;
@@ -16,6 +15,11 @@
             border: 1px solid white;
             animation: 1.5s linear 0.2s apparition;
             overflow: hidden;
+            text-align: left;
+
+            img {
+                width: 100px;
+            }
         }
     }
 

@@ -13,15 +13,32 @@
             justify-content: space-evenly;
             align-items: center;
 
-            h2 {
-                text-align: center;
-                align-self: center;
-                width: 40%;
-                padding: 0px 20px;
+            .presentation_title {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+
+                h2 {
+                    text-align: center;
+                    align-self: center;
+                    width: 100%;
+                    padding: 0px 20px;
+                    color: green;
+                }
+
+                img {
+                    width: 350px;
+                    border-radius: 20px;
+                    max-height: 200px;
+                    object-fit: cover;
+                }
             }
 
             .presentation_text {
                 padding: 0px 25px;
+                align-self: center;
             }
         }
 
@@ -37,8 +54,14 @@
         .presentation {
             flex-direction: column;
 
-            h2 {
-                width: 100%;
+            .presentation_title {
+                h2 {
+                    width: 100%;
+                }
+    
+                img {
+                    width: 60%;
+                }
             }
         }
     }
